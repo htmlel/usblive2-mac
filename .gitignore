@@ -1,0 +1,20 @@
+# build output
+USB-Live2.app/
+build/
+USB-Live2.zip
+usblive2_capture
+usblive2_viewer
+usblive2_mock
+viewer_mock
+engine_test
+*.o
+*.dSYM/
+
+# test captures
+*.bmp
+*.yuv
+*.wav
+*.mp4
+*.zip
+
+.DS_Store
