@@ -59,6 +59,54 @@ press stop before quitting the app.
 - NTSC tapes (US, Canada, Japan) are tested. PAL (Europe, Australia) is
   supported in Settings but untested.
 
+## Quick start
+
+1. Connect the camcorder or VCR to the USB-Live2 (video plus the red and
+   white audio cables), and plug the USB-Live2 into your Mac.
+2. Open USB-Live2 and press play on the tape. If there's no picture, pick
+   Composite or S-Video to match your cable.
+3. The app starts muted to avoid loud feedback. Click the speaker to listen.
+   Recordings include sound either way.
+4. Press the red button (⌘R) to start recording and again to stop. The
+   video is saved to your Movies folder.
+5. To cut out parts, click the scissors (⇧⌘E), open the recording, edit it,
+   and click Export. The edited copy is saved where you choose and the
+   original stays untouched.
+
+## Buttons
+
+The control bar at the bottom of the window, left to right:
+
+| Button | What it does |
+|---|---|
+| Composite / S-Video | Picks the input that matches your cable (⌘1 / ⌘2) |
+| Red circle | Starts and stops recording (⌘R) |
+| Camera | Saves a still picture to your Pictures folder (⇧⌘S) |
+| Speaker | Mutes or unmutes what you hear (⌥⌘M). Doesn't affect recordings |
+| Slider | Listening volume |
+| Bar next to the slider | Audio level meter, so you can see sound is coming in |
+| Scissors | Opens the editor (⇧⌘E) |
+| Sliders icon | Settings: brightness, contrast, color, deinterlace, crop edges, NTSC / PAL |
+| Arrows | Full screen (⌃⌘F, or double-click the picture) |
+
+In the editor:
+
+| Control | What it does |
+|---|---|
+| Ruler at the top of the timeline | Click or drag to move the playhead |
+| Drag across the pictures | Selects a section in yellow |
+| Mark In / Mark Out (I / O) | Starts or ends the yellow selection at the playhead |
+| Delete | Cuts out the yellow selection; the parts on each side join up |
+| Split (S) | Splits the video into two parts at the playhead |
+| Part bar above the pictures | Click to select a whole part, drag to move it |
+| Marker between two parts | Pick Cut, Crossfade or Fade to Black for that join |
+| ← → | One frame back or forward (⇧ for one second) |
+| Space | Play / pause |
+| ⌘Z / ⇧⌘Z | Undo / Redo |
+| Selection panel | Fine-tune the selection one frame at a time (hold − or + to keep moving) |
+| Crop Picture, Audio | Crop the edges; fix audio that's only on one side |
+| Export | Saves the edited video as a new file |
+
 ## Download
 
 Get `USB-Live2.zip` from the Releases page, unzip it and drag the app into
