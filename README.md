@@ -1,8 +1,9 @@
-# usblive2-capture
+# USB-Live2 for Mac
 
 A native Mac app for the **Hauppauge USB-Live2** (USB ID 2040:c200), made
 for digitizing VHS, Hi8 and other analog tapes. It works on Apple Silicon
-with no Hauppauge driver, and supports the USB-Live2 only. It runs in userspace on top of libusb.
+with no Hauppauge driver, and supports the USB-Live2 only. It runs in
+userspace on top of libusb.
 
 ![USB-Live2 app](docs/screenshot.png)
 
@@ -10,27 +11,9 @@ The hardware programming is the Linux kernel's `cx231xx` and `cx25840` driver
 code, copied verbatim and called in the same order Linux calls it. A small
 compatibility layer maps kernel APIs onto libusb.
 
-## Download
+## Features
 
-Get `USB-Live2.zip` from the Releases page, unzip it and drag the app into
-Applications. It needs two free tools from Homebrew (https://brew.sh):
-
-    brew install libusb ffmpeg
-
-The app isn't notarized by Apple, so macOS may say it can't be opened or is
-damaged. To allow it, run this once in Terminal:
-
-    xattr -dr com.apple.quarantine /Applications/USB-Live2.app
-
-Requires a Mac with Apple Silicon and macOS 14 or later.
-
-## Building from source (USB-Live2.app)
-
-    brew install libusb pkg-config ffmpeg
-    make app
-    open USB-Live2.app        # or drag it into Applications
-
-A native SwiftUI app: the video fills the window, with a floating control bar
+The video fills the window, with a floating control bar
 that fades out when the pointer is idle.
 
 - Composite / S-Video switch (⌘1 / ⌘2)
@@ -57,11 +40,57 @@ press stop before quitting the app.
   Handles and −/+ buttons adjust the selection frame by frame
 - Change any join to a Crossfade or Fade to Black; optional fade in/out
 - Drag parts by their bar to rearrange them; S splits at the playhead
-- One timeline: deleted parts come off it completely and the rest closes
-  up; the export is a new video and the original file is never changed
+- One timeline: deleted parts come off it completely and the rest closes up
 - Undo / Redo (⌘Z / ⇧⌘Z)
 - Crop the picture; fix audio (Left → Both, Right → Both, Mix to Mono)
 - Export to a new MP4 wherever you choose; the original is never changed
+
+## What you need
+
+- A Mac with Apple Silicon and macOS 14 or later
+- A Hauppauge USB-Live2, with both the video cable (yellow composite or
+  S-Video) and the red and white audio cables plugged in. Without the audio
+  cables, recordings are silent.
+- The USB-Live2 has a USB-A plug. It has been tested through a USB-C hub on
+  a Mac with only USB-C ports. A plain USB-C to USB-A adapter should work
+  the same way but hasn't been tested yet.
+- NTSC tapes (US, Canada, Japan) are tested. PAL (Europe, Australia) is
+  supported in Settings but untested.
+
+## Download
+
+Get `USB-Live2.zip` from the Releases page, unzip it and drag the app into
+Applications. It needs two free tools from Homebrew (https://brew.sh):
+
+    brew install libusb ffmpeg
+
+The app isn't notarized by Apple, so macOS may say it can't be opened or is
+damaged. To allow it, run this once in Terminal:
+
+    xattr -dr com.apple.quarantine /Applications/USB-Live2.app
+
+## Troubleshooting
+
+- **"Connect your USB-Live2" stays on screen:** unplug the USB-Live2 and
+  plug it back in, or try another port or hub.
+- **No Signal or a black picture:** switch between Composite and S-Video to
+  match the cable you used, check NTSC / PAL in Settings, and make sure the
+  tape is playing.
+- **No sound:** check the red and white audio cables. The app starts muted
+  on purpose to avoid loud feedback; unmute it to listen. Recordings include
+  sound even while muted.
+- **A date or time flashing on the picture:** it was recorded onto the tape
+  by the camcorder, so it can't be removed. Turn off the camera's date
+  display for future recordings.
+
+## Building from source
+
+Needs Apple's Command Line Tools and Homebrew:
+
+    xcode-select --install
+    brew install libusb pkg-config ffmpeg
+    make app
+    open USB-Live2.app        # or drag it into Applications
 
 ## Older tools (SDL viewer and command line)
 
