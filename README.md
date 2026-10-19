@@ -4,6 +4,8 @@ A native Mac app for the **Hauppauge USB-Live2** (USB ID 2040:c200), made
 for digitizing VHS, Hi8 and other analog tapes. It works on Apple Silicon
 with no Hauppauge driver, and supports the USB-Live2 only. It runs in userspace on top of libusb.
 
+![USB-Live2 app](docs/screenshot.png)
+
 The hardware programming is the Linux kernel's `cx231xx` and `cx25840` driver
 code, copied verbatim and called in the same order Linux calls it. A small
 compatibility layer maps kernel APIs onto libusb.
