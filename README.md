@@ -48,6 +48,8 @@ press stop before quitting the app.
 ## What you need
 
 - A Mac with Apple Silicon and macOS 14 or later
+  - Tested on a MacBook Air (13-inch, M4, 2025) with macOS Tahoe 26.6.2.
+    Other Apple Silicon Macs should work but are untested.
 - A Hauppauge USB-Live2, with both the video cable (yellow composite or
   S-Video) and the red and white audio cables plugged in. Without the audio
   cables, recordings are silent.
@@ -56,8 +58,6 @@ press stop before quitting the app.
   the same way but hasn't been tested yet.
 - NTSC tapes (US, Canada, Japan) are tested. PAL (Europe, Australia) is
   supported in Settings but untested.
-- Tested on a MacBook Air (13-inch, M4, 2025) with macOS Tahoe 26.6.2. Other
-  Apple Silicon Macs with macOS 14 or later should work but are untested.
 
 ## Download
 
