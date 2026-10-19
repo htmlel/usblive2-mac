@@ -56,6 +56,8 @@ press stop before quitting the app.
   the same way but hasn't been tested yet.
 - NTSC tapes (US, Canada, Japan) are tested. PAL (Europe, Australia) is
   supported in Settings but untested.
+- Tested on a MacBook Air (13-inch, M4, 2025) with macOS Tahoe 26.6.2. Other
+  Apple Silicon Macs with macOS 14 or later should work but are untested.
 
 ## Download
 
