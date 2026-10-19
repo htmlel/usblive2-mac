@@ -44,6 +44,11 @@ that fades out when the pointer is idle.
 
 Settings are remembered between launches.
 
+**Long recordings:** while recording, the app keeps your Mac from going to
+sleep, and recording continues if you minimize the window or the screen
+turns off. On a MacBook, keep the lid open and the power plugged in, and
+press stop before quitting the app.
+
 **Edit Recording** (scissors button, or ⇧⌘E) opens an editor window:
 
 - Timeline with thumbnails and separate L/R audio waveforms, zoom up to 16×
